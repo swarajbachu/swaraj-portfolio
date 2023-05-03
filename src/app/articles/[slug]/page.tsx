@@ -17,8 +17,8 @@ export default async function Page({params}:Props) {
   console.log(page)
 
   return (
-    <div><h1 className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold">{page[0].title}</h1>
-      <div className="text-lg text-gray-700 mt-10"><PortableText value={page[0].body} /></div>
+    <div><h1 className=" text-primary dark:text-primaryDark text-5xl font-extrabold">{page[0].title}</h1>
+      <div className="text-lg text-gray-700 dark:text-gray-400 mt-10"><PortableText value={page[0].body} /></div>
     </div>
   )
 }

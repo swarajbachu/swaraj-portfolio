@@ -45,6 +45,7 @@ const BlogCard = ({index,title,alt,description,date,image,slug}:BlogCardProps) =
     //     </a>
 
     // </div>
+    <div className='relative my-6'>
     <motion.div
     variants={fadeIn('up', 'spring', index * 0.5, 1)}
     className="flex flex-row md:flex-col gap-4"
@@ -56,10 +57,10 @@ const BlogCard = ({index,title,alt,description,date,image,slug}:BlogCardProps) =
     />
     <div className="w-full flex justify-between items-center">
       <div className="flex-1 md:ml-[62px] flex flex-col max-w-[650px]">
-        <h4 className="font-normal text-[42px] lg:text-[26px] text-white">
+        <h4 className="font-normal text-[42px] lg:text-[26px] text-gray-700 dark:text-primaryDark">
           {title}
         </h4>
-        <p className="mt-[16px] font-normal text-[20px] lg:text-[14px] text-white">
+        <p className="mt-[16px] font-normal text-[20px] lg:text-[14px]  text-gray-500 dark:text-primaryDark">
           {description}
         </p>
       </div>
@@ -67,7 +68,7 @@ const BlogCard = ({index,title,alt,description,date,image,slug}:BlogCardProps) =
       <div
         className="flex lg:hidden items-center justify-center w-[100px] h-[100px]
         cursor-pointer
-        rounded-full bg-transparent border-[1px] border-white"
+        rounded-full bg-transparent border-[1px] border-gray-500 hover:border-gray-950 dark:hover:border-gray-300 "
         onClick={() => router.push(`/articles/${slug}`)}
       >
         <BsArrowUpRight
@@ -76,6 +77,7 @@ const BlogCard = ({index,title,alt,description,date,image,slug}:BlogCardProps) =
       </div>
     </div>
   </motion.div>
+  </div>
   )
 }
 

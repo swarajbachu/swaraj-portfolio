@@ -87,11 +87,9 @@
 .gradient-04 {
     position: absolute;
     width: 304px;
-    height: 60vh;
-  
-  
-    background: rgba(45, 72, 152, 0.75);
-    filter: blur(200px);
+    height: 30vh;
+    background: rgba(79, 107, 192, 0.75);
+    filter: blur(100px);
     transform: rotate(-53.13deg);
 }
   

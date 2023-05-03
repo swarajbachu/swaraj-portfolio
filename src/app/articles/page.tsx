@@ -16,6 +16,8 @@ export default async function Articles(){
   return (
     <div className='min-h-screen'>
       <h1 className='font-bold text-3xl mb-7'>Articles</h1>
+      <span  className='absolute gradient-04'/>
+
       <motion.div
       variants={{
         hidden: {},
@@ -34,7 +36,8 @@ export default async function Articles(){
       {
         blogs.map((blog,index) => (
           console.log(index),
-          <div key={blog._id}>
+          <div 
+          key={blog._id}>
             <BlogCard 
             index={index}
             title={blog.title} 
