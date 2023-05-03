@@ -1,14 +1,11 @@
 import { createClient, groq } from "next-sanity";
 import { Blog } from "./types/blog";
+import { sanityClient } from "./config/client-config";
 
 
 export async function getBlogs():Promise<Blog[]>{
 
-    const client = createClient({
-        projectId: 'c3dq0t2n',
-        dataset: 'production',
-        apiVersion: '2021-03-25',
-    })
+    const client = sanityClient;
 
     return client.
     fetch(
@@ -16,7 +13,9 @@ export async function getBlogs():Promise<Blog[]>{
         _id,
         title,
         slug,
+        publishedAt,
         body,
+        description,
         mainImage {
           asset -> {
             _id,
@@ -26,6 +25,30 @@ export async function getBlogs():Promise<Blog[]>{
         }
       }`
       )
-      
-
 }
+
+export async function getBlogBySlug(slug:string){
+  const client = sanityClient;
+
+  return client.
+  fetch(
+     groq `*[_type == "post" && slug.current == $slug] {
+      _id,
+      title,
+      slug,
+      publishedAt,
+      body,
+      description,
+      mainImage {
+        asset -> {
+          _id,
+          url
+        },
+        alt
+      }
+    }`,
+    {slug}
+    )
+}
+
+
