@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { getBlogs } from '../../../sanity/sanity-utils'
 import { Blog } from '../../../sanity/types/blog';
 import BlogCard from './blog_card';
@@ -9,6 +9,8 @@ import styles from '../style';
 import { staggerContainer } from '@/utils/motion';
 
 export default async function Articles(){
+
+
 
   const blogs = await getBlogs()
   console.log(blogs[0])
