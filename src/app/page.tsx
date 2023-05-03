@@ -30,11 +30,12 @@ export default function Home() {
            <span className="abosulte  inset-0 hero-gradient"/>
 
                <div className='w-1/2 md:w-full'>
-                <Image src={profilePic} alt="Swaraj Bachu" className='h-auto rounded-lg lg:hidden md:inline-block '
+                <Image src={profilePic} alt="Swaraj Bachu" className='h-auto sm:mb-7 rounded-lg lg:hidden md:inline-block '
                 priority
-                sizes="(max-width: 768px) 80vw,
-              (max-width: 1200px) 50vw,
-              50vw"
+                sizes="(max-width: 768px) 70vw,
+              (max-width: 1200px) 30vw,
+              30vw"
+              
                  />
                </div>
                <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
