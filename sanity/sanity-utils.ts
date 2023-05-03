@@ -27,9 +27,8 @@ export async function getBlogs():Promise<Blog[]>{
       )
 }
 
-export async function getBlogBySlug(slug:string){
+export async function getBlogBySlug(slug:string):Promise<Blog[]>{
   const client = sanityClient;
-
   return client.
   fetch(
      groq `*[_type == "post" && slug.current == $slug] {

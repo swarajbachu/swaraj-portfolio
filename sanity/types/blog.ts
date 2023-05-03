@@ -4,7 +4,9 @@ export type Blog = {
     
     _id: string,
     title: string,
-    slug: string,
+    slug: {
+        current: string,
+    },
     publishedAt: string,
     mainImage: {
         asset: {
@@ -18,6 +20,5 @@ export type Blog = {
     categories: string[],
     body: PortableTextBlock[];
 
-
-
 }
+
