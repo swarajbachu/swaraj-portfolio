@@ -35,15 +35,17 @@ if(isLoading) return (
 );
 
   return (
-    <div><h1 className=" text-primary dark:text-primaryDark text-5xl font-extrabold">{page[0].title}</h1>
+    <div><h1 className=" text-primary dark:text-primaryDark text-6xl font-medium">{page[0].title}</h1>
     <Image
       src={page[0].mainImage?.asset.url?page[0].mainImage.asset.url:'/placeholder.jpeg'}
       alt='Blog Post Image'
-      className='rounded-lg'
+      className='rounded-lg w-full h-[60vh] object-cover my-8'
       width={500}
       height={500}
     />
-      <div className="text-lg text-gray-700 dark:text-gray-400 mt-10"><PortableText value={page[0].body} components={RichText} /></div>
+      <div className="text-lg text-gray-700 dark:text-gray-200 w-[80%] mt-10">
+        <PortableText value={page[0].body} components={RichText} />
+        </div>
     </div>
   )
 }
