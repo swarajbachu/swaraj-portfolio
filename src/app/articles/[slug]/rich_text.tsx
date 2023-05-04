@@ -49,12 +49,13 @@ export const RichText = {
                 {children}
             </blockquote>
         ),
-        code: ({ children }:any) => (
-            <pre className='bg-gray-200 dark:bg-gray-800 p-5 rounded-md'>
-                <code>{children}</code>
-            </pre>
-        ),
+        
     },
+    code: ({ children }:any) => (
+        <pre className='bg-gray-200 dark:bg-gray-800 p-5 rounded-md'>
+            <code>{children}</code>
+        </pre>
+    ),
 
     marks: {
         link: ({ children, value }:any) => {

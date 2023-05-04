@@ -1,6 +1,8 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {schemaTypes} from './sanity/schemas'
+import {codeInput} from '@sanity/code-input'
+
 
 
 export default defineConfig({
@@ -12,7 +14,7 @@ export default defineConfig({
   apiVersion: '2021-03-25',
   basePath: '/admin',
 
-  plugins: [deskTool()],
+  plugins: [deskTool(),codeInput()],
   schema: { types: schemaTypes }
 
 })
