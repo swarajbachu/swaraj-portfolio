@@ -19,6 +19,9 @@ export const RichText = {
              );
         },
     },
+
+    
+
     lists: {
         bullet: ({ children }:any) => (
              <ul className='ml-10 py-5 list-disc space-y-5'>
@@ -49,13 +52,10 @@ export const RichText = {
                 {children}
             </blockquote>
         ),
+       
         
     },
-    code: ({ children }:any) => (
-        <pre className='bg-gray-200 dark:bg-gray-800 p-5 rounded-md'>
-            <code>{children}</code>
-        </pre>
-    ),
+   
 
     marks: {
         link: ({ children, value }:any) => {
@@ -71,6 +71,14 @@ export const RichText = {
                 </Link>
             );
         },
+        code: ({children, value }:any) => (
+            <pre className='bg-gray-200 dark:bg-gray-800 p-5 rounded-md'>
+                <code>
+                {children}
+                </code>
+               
+            </pre>
+        ),
     },
 
 
