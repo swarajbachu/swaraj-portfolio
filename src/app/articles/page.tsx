@@ -7,7 +7,6 @@ import BlogCard from './blog_card';
 import { motion } from 'framer-motion';
 import styles from '../style';
 import { staggerContainer } from '@/utils/motion';
-import { useParams } from 'next/navigation';
 
 export default function Articles(){
 
