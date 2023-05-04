@@ -159,7 +159,7 @@
     height: 100px;
     background: rgba(97, 64, 181, 0.25);
     filter: blur(175px);
-    transform: rotate(-114.2deg);
+    /* transform: rotate(-114.2deg); */
   }
 
 

@@ -37,7 +37,9 @@ const BlogCard = ({index,title,alt,description,date,image,slug}:BlogCardProps) =
     />
     <div className="w-full flex justify-between items-center">
       <div className="flex-1 md:ml-[62px] flex flex-col max-w-[650px]">
-        <h4 className="font-normal text-[42px] lg:text-[26px] text-gray-700 dark:text-primaryDark">
+        <h4 className="font-normal text-[42px] cursor-pointer lg:text-[26px] text-gray-700 dark:text-primaryDark"
+        onClick={() => router.push(`/articles/${slug}`)}
+        >
           {title}
         </h4>
         <p className="mt-[16px] font-normal text-[20px] lg:text-[14px]  text-gray-500 dark:text-primaryDark">

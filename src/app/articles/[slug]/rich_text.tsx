@@ -2,18 +2,21 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 import {urlFor} from "../../../../sanity/sanity-utils"
+import { CodeBlock, dracula } from "react-code-blocks";
+
+
 
 export const RichText = {
 
     types: {
         image: ({ value }:any) => {
             return(
-                 <div className='relative pl-0 w-[80%] h-96 my-10'>
+                 <div className='relative pl-0 w-[80%] sm:w-full h-96 my-10'>
                  <Image
                  style={{
                     objectPosition: 'top left'
                  }}
-                className='rounded-lg object-contain text-left ml-0'
+                className='object-contain text-left ml-0'
                 src={urlFor(value.asset).url()}
                 fill
                 alt='Blog Post Image'
@@ -68,19 +71,24 @@ export const RichText = {
                 <Link
                 href={value.href}
                 rel={rel}
-                className='text-primary dark:text-darkPrimary hover:text-black dark:hover:text-white'
+                className='text-primary dark:text-blue-300 hover:text-black dark:hover:text-gray-300'
                 >
                     {children}
                 </Link>
             );
         },
         code: ({children, value }:any) => (
-            <pre className='bg-gray-200 dark:bg-gray-800 p-5 rounded-md'>
-                <code>
-                {children}
-                </code>
+            // <pre className='bg-gray-200 dark:bg-gray-800 p-5 rounded-md'>
+            //     <code>
+            //     {children}
+            //     </code>
                
-            </pre>
+            // </pre>
+            <CodeBlock
+            text={children}
+            showLineNumbers={false}
+            theme = {dracula}
+            />
         ),
     },
 
