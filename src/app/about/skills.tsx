@@ -44,7 +44,7 @@ const Skills = () => {
         >
           Dev & Design
         </motion.div>
-        <Skill name="HTML" x="-20vw" y="2vw" />
+        <Skill name="Node Js" x="-20vw" y="2vw" />
         <Skill name="AI/ML" x="-5vw" y="-10vw" />
         <Skill name="TypeScript" x="20vw" y="6vw" />
         <Skill name="Flutter" x="0vw" y="12vw" />
