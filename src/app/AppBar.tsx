@@ -216,7 +216,7 @@ const NavBar = () => {
               toggle={handleClick}
             />
             <CustomMobileLink
-              href="/articles"
+              href="https://notes.swarajbachu.tech"
               title="Articles"
               className=""
               toggle={handleClick}
